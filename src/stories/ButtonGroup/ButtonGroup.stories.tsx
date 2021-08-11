@@ -31,6 +31,17 @@ const defaultArgs: {} = {
 	className: '',
 };
 
+export const Default = Template.bind({});
+Default.args = {
+	...defaultArgs,
+	children: (
+		<>
+			<Button theme='secondary'>취소</Button>
+			<Button>확인</Button>
+		</>
+	),
+};
+
 export const RightAlign = Template.bind({});
 RightAlign.args = {
 	...defaultArgs,
@@ -43,32 +54,8 @@ RightAlign.args = {
 	),
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
-	...defaultArgs,
-	direction: 'column',
-	children: (
-		<>
-			<Button>CLICK ME</Button>
-			<Button>CLICK ME</Button>
-		</>
-	),
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-	...defaultArgs,
-	gap: '1rem',
-	children: (
-		<>
-			<Button theme='secondary'>취소</Button>
-			<Button>확인</Button>
-		</>
-	),
-};
-
-export const Tertiary = Template.bind({});
-Tertiary.args = {
+export const Column = Template.bind({});
+Column.args = {
 	...defaultArgs,
 	direction: 'column',
 	gap: '1rem',
