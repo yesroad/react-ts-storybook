@@ -1,3 +1,4 @@
+import { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import Button from '../Button/Button';
@@ -31,27 +32,24 @@ const defaultArgs: {} = {
 	className: '',
 };
 
+const buttonComponent: EmotionJSX.Element = (
+	<>
+		<Button theme='secondary'>취소</Button>
+		<Button>확인</Button>
+	</>
+);
+
 export const Default = Template.bind({});
 Default.args = {
 	...defaultArgs,
-	children: (
-		<>
-			<Button theme='secondary'>취소</Button>
-			<Button>확인</Button>
-		</>
-	),
+	children: buttonComponent,
 };
 
 export const RightAlign = Template.bind({});
 RightAlign.args = {
 	...defaultArgs,
 	rightAlign: true,
-	children: (
-		<>
-			<Button theme='secondary'>취소</Button>
-			<Button>확인</Button>
-		</>
-	),
+	children: buttonComponent,
 };
 
 export const Column = Template.bind({});
@@ -59,10 +57,5 @@ Column.args = {
 	...defaultArgs,
 	direction: 'column',
 	gap: '1rem',
-	children: (
-		<>
-			<Button theme='secondary'>취소</Button>
-			<Button>확인</Button>
-		</>
-	),
+	children: buttonComponent,
 };
