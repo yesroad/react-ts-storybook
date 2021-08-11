@@ -7,6 +7,7 @@ const Button = ({
 	children,
 	theme = 'primary',
 	size = 'medium',
+	disabled,
 	onClick,
 	...props
 }: ButtonProps) => {
@@ -14,6 +15,7 @@ const Button = ({
 		<button
 			type='button'
 			css={[buttonStyle, themes[theme], sizes[size]]}
+			disabled={disabled}
 			onClick={onClick}
 			{...props}
 		>
@@ -44,6 +46,10 @@ const buttonStyle = css`
 	&:active {
 		background: #12b886;
 	}
+  &:disabled {
+    cursor: not-allowed;
+		opacity: 0.6;
+  }	
 `;
 
 const themes = {

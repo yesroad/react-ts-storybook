@@ -13,22 +13,26 @@ export const Default = Template.bind({});
 Default.args = {
   theme: 'primary',
   children: 'Button',
+  disabled: false,
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
   theme: 'primary',
   children: 'Primary',
+  disabled: false
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   theme: 'secondary',
   children: 'Secondary',
+  disabled: false
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
   theme: 'tertiary',
   children: 'Tertiary',
+  disabled: false
 };
