@@ -15,20 +15,20 @@ Default.args = {
   children: 'Button',
 };
 
+export const Primary = Template.bind({});
+Primary.args = {
+  theme: 'primary',
+  children: 'Primary',
+};
+
 export const Secondary = Template.bind({});
 Secondary.args = {
   theme: 'secondary',
-  children: 'Button',
+  children: 'Secondary',
 };
 
-export const Large = Template.bind({});
-Large.args = {
+export const Tertiary = Template.bind({});
+Tertiary.args = {
   theme: 'tertiary',
-  children: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  theme: 'primary',
-  children: 'Button',
+  children: 'Tertiary',
 };
