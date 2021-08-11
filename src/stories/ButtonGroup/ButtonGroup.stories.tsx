@@ -37,7 +37,7 @@ RightAlign.args = {
 	rightAlign: true,
 	children: (
 		<>
-			<Button theme='tertiary'>취소</Button>
+			<Button theme='secondary'>취소</Button>
 			<Button>확인</Button>
 		</>
 	),
@@ -61,7 +61,7 @@ Secondary.args = {
 	gap: '1rem',
 	children: (
 		<>
-			<Button theme='tertiary'>취소</Button>
+			<Button theme='secondary'>취소</Button>
 			<Button>확인</Button>
 		</>
 	),
@@ -74,7 +74,7 @@ Tertiary.args = {
 	gap: '1rem',
 	children: (
 		<>
-			<Button theme='tertiary'>취소</Button>
+			<Button theme='secondary'>취소</Button>
 			<Button>확인</Button>
 		</>
 	),
