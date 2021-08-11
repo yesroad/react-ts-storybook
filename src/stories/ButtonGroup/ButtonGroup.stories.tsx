@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { buttonArgs, buttonArgTypes } from '../common/ArgTypes';
 
 import Button from '../Button/Button';
 import ButtonGroup from './ButtonGroup';
@@ -8,13 +7,15 @@ export default {
 	title: 'Component/ButtonGroup',
 	component: ButtonGroup,
 	argTypes: {
-		...buttonArgTypes,
 		direction: {
-			control: { type: 'radio' },
+			control: { type: 'inline-radio' },
 			options: ['row', 'column'],
 		},
 		rightAlign: {
 			control: { type: 'boolean' },
+		},
+		gap: {
+			control: { type: 'text' },
 		},
 	},
 } as ComponentMeta<typeof ButtonGroup>;
@@ -23,9 +24,16 @@ const Template: ComponentStory<typeof ButtonGroup> = (args) => (
 	<ButtonGroup {...args} />
 );
 
+const defaultArgs: {} = {
+	direction: 'row',
+	rightAlign: false,
+	gap: '0.5rem',
+	className: '',
+};
+
 export const RightAlign = Template.bind({});
 RightAlign.args = {
-	...buttonArgs,
+	...defaultArgs,
 	rightAlign: true,
 	children: (
 		<>
@@ -37,7 +45,7 @@ RightAlign.args = {
 
 export const Primary = Template.bind({});
 Primary.args = {
-	...buttonArgs,
+	...defaultArgs,
 	direction: 'column',
 	children: (
 		<>
@@ -49,7 +57,7 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-	...buttonArgs,
+	...defaultArgs,
 	gap: '1rem',
 	children: (
 		<>
@@ -61,7 +69,7 @@ Secondary.args = {
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
-	...buttonArgs,
+	...defaultArgs,
 	direction: 'column',
 	gap: '1rem',
 	children: (

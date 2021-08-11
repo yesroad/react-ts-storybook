@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { buttonArgs, buttonArgTypes } from '../common/ArgTypes';
 
 import Button from './Button';
 
@@ -7,36 +6,49 @@ export default {
 	title: 'Component/Button',
 	component: Button,
 	argTypes: {
-		...buttonArgTypes
+		theme: {
+			control: { type: 'select' },
+			options: ['primary', 'secondary', 'tertiary'],
+		},
+		size: {
+			control: { type: 'select' },
+			options: ['small', 'medium', 'large'],
+		},
 	},
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
+const defaultArgs: {} = {
+  theme: 'primary',
+	disabled: false,
+	size: 'medium',
+};
+
 export const Default = Template.bind({});
 Default.args = {
-	...buttonArgs,	
+	...defaultArgs,	
 	theme: 'primary',
 	children: 'Button',
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
-	...buttonArgs,	
+	...defaultArgs,	
 	theme: 'primary',
 	children: 'Primary',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-	...buttonArgs,	
+	...defaultArgs,	
 	theme: 'secondary',
 	children: 'Secondary',
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
-	...buttonArgs,	
+	...defaultArgs,	
 	theme: 'tertiary',
 	children: 'Tertiary',
 };

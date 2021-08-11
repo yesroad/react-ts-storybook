@@ -12,7 +12,12 @@ const ButtonGroup = ({
 }: ButtonGroupProps) => {
 	return (
 		<section
-			css={[style, gapStyle(direction, gap), rightAlign && rightAlignStyle]}
+			css={[
+				style,
+				gapStyle(direction, gap),
+				rightAlign && rightAlignStyle,
+				direction === 'column' && columnStyle,
+			]}
 			className={className}
 		>
 			{children}
@@ -36,6 +41,13 @@ const style = css`
 
 const rightAlignStyle = css`
 	justify-content: flex-end;
+`;
+
+const columnStyle = css`
+	flex-wrap: wrap;
+	button {
+		width: 100%;
+	}
 `;
 
 export default ButtonGroup;
