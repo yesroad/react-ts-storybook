@@ -8,5 +8,5 @@ export interface ButtonProps {
   /** 클릭했을 때 호출할 함수 */
   onClick?: () => void;
   /** 버튼을 비활성화 */
-  disabled: boolean;
+  disabled?: boolean;
 }

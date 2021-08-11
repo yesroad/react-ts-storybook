@@ -14,7 +14,7 @@ const Button = ({
 	return (
 		<button
 			type='button'
-			css={[buttonStyle, themes[theme], sizes[size]]}
+			css={[style, themes[theme], sizes[size]]}
 			disabled={disabled}
 			onClick={onClick}
 			{...props}
@@ -24,7 +24,7 @@ const Button = ({
 	);
 };
 
-const buttonStyle = css`
+const style = css`
   cursor: pointer;
 	outline: none;
 	border: none;
