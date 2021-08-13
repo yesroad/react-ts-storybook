@@ -55,6 +55,10 @@ export const IconList = () => {
 	);
 };
 
+IconList.parameters = {
+	controls: { hideNoControlsWarning: true },
+}
+
 const iconListStyle = css`
 	list-style: none;
 	display: flex;
