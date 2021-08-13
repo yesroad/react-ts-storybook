@@ -6,7 +6,7 @@ export interface ButtonProps {
   /** 버튼 사이즈 */
   size?: 'small' | 'medium' | 'large';
   /** 클릭했을 때 호출할 함수 */
-  onClick?: () => void;
+  onClick?: (e?: MouseEventHandler<HTMLButtonElement>) => void;
   /** 버튼을 비활성화 */
   disabled?: boolean;
 }

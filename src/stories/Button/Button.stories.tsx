@@ -24,14 +24,6 @@ const defaultArgs: {} = {
 	disabled: false,
 	size: 'medium',
 };
-
-export const Default = Template.bind({});
-Default.args = {
-	...defaultArgs,	
-	theme: 'primary',
-	children: 'Button',
-};
-
 export const Primary = Template.bind({});
 Primary.args = {
 	...defaultArgs,	
