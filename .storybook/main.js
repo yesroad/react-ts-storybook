@@ -24,6 +24,7 @@ module.exports = {
           "pragma": "__to_avoid_prepending_/** @jsxImportSource @emotion/react */"
         }
       ],
+      "react-require"
     ]
   }),  
 }
