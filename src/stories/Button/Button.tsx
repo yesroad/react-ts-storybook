@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 
 import { ButtonProps } from './types';
 
+/** 버튼 컴포넌트 입니다. */
 const Button = ({
 	children,
 	theme = 'primary',

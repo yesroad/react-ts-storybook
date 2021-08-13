@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 
 import { ButtonGroupProps } from './types';
 
+/** 2개의 버튼을 묶어놓은 버튼그룹 컴포넌트 입니다. */
 const ButtonGroup = ({
 	direction = 'row',
 	rightAlign,
