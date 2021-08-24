@@ -6,8 +6,6 @@
 
 > npm repository
 ```json
-  
-
   $ https://www.npmjs.com/package/yesroad-npm-storybook
 ```
 
@@ -29,7 +27,7 @@
 
 > eslint 설정 추가
 ```json
-  // ESLint확장을 설치후 settings.json 파일 내부에
+  # ESLint확장을 설치후 settings.json 파일 내부에
 
   "eslint.validate": [
       "typescript",
@@ -39,10 +37,10 @@
 
 >하나의 파일만 검사 방법
 ```json
-  // eslint
+  # eslint
   $ npx eslint {파일경로}
 
-  // eslint fix
+  # eslint fix
   $ npx eslint {파일경로} -- fix
 
   // prettier (Format Document 옵션이 prettier로 설정되있어야한다.)
@@ -51,7 +49,7 @@
 
 > eslint 명령어
 ```json
-  // eslint + prettier 검사 명령어 (모든 파일 적용)
+  # eslint + prettier 검사 명령어 (모든 파일 적용)
 
   $ npm run prettier // prettier 적용
   $ npm run lint // eslint 검사
