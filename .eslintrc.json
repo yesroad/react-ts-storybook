@@ -1,0 +1,38 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "node": true
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "prettier",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {"extensions": ["js", "jsx", "ts", "tsx"] }
+    ],
+    "arrow-parens": ["warn", "as-needed"],
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "import/prefer-default-export": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-props-no-spreading": "warn",
+    "react/prop-types": "off",
+    "no-underscore-dangle": "off",
+    "react/require-default-props": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-tabs": "off"
+  }
+}
