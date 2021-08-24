@@ -1,17 +1,14 @@
-# Brandi Desigin System
+# React + Typescript + Storybook
 
+### eslint + pritter
 
-## eslint + pritter
-
-### 필수 확장프로그램
----
+> 필수 확장프로그램
 ```json
   $ eslint
   $ prettier
 ```
 
-### eslint 설정 추가
----
+> eslint 설정 추가
 ```json
   // ESLint확장을 설치후 settings.json 파일 내부에
 
@@ -21,8 +18,7 @@
   ],
 ```
 
-### 하나의 파일만 검사 방법
----
+>하나의 파일만 검사 방법
 ```json
   // eslint
   $ npx eslint {파일경로}
@@ -34,8 +30,7 @@
   $ fn + f1 -> Format Document 검색 후 선택
 ```
 
-### eslint 명령어
----
+> eslint 명령어
 ```json
   // eslint + prettier 검사 명령어 (모든 파일 적용)
 
