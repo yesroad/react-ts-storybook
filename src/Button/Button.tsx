@@ -1,31 +1,22 @@
 import { css } from '@emotion/react';
+import { radiusStyle } from '../common/styles/styles';
+import { RadiusProps } from '../common/types/types';
 
-import { ButtonProps } from './types';
-
-/** 버튼 컴포넌트 입니다. */
-const Button = ({
-	children,
-	theme = 'primary',
-	size = 'medium',
-	disabled,
-	onClick,
-	...props
-}: ButtonProps) => {
-	return (
-		<button
-			type='button'
-			css={[style, themes[theme], sizes[size]]}
-			disabled={disabled}
-			onClick={onClick}
-			{...props}
-		>
-			{children}
-		</button>
-	);
-};
+interface ButtonProps extends RadiusProps {
+	/** 버튼 안의 내용 */
+	children: React.ReactNode;
+	/** 버튼 테마 */
+	theme?: 'primary' | 'secondary' | 'tertiary';
+	/** 버튼 사이즈 */
+	size?: 'small' | 'medium' | 'large';
+	/** 클릭했을 때 호출할 함수 */
+	onClick?: (e?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+	/** 버튼을 비활성화 */
+	disabled?: boolean;
+}
 
 const style = css`
-  cursor: pointer;
+	cursor: pointer;
 	outline: none;
 	border: none;
 	box-sizing: border-box;
@@ -46,10 +37,10 @@ const style = css`
 	&:active {
 		background: #12b886;
 	}
-  &:disabled {
-    cursor: not-allowed;
+	&:disabled {
+		cursor: not-allowed;
 		opacity: 0.6;
-  }	
+	}
 `;
 
 const themes = {
@@ -102,5 +93,30 @@ const sizes = {
 		padding: 0 1.5rem;
 	`,
 };
+
+/** 버튼 컴포넌트 입니다. */
+const Button = ({
+	children,
+	theme = 'primary',
+	size = 'medium',
+	disabled,
+	onClick,
+	radiusType = 'default',
+	radiusSize = 'sm',
+}: ButtonProps) => (
+	<button
+		type="button"
+		css={[
+			style,
+			themes[theme],
+			sizes[size],
+			radiusStyle[radiusType][radiusSize],
+		]}
+		disabled={disabled}
+		onClick={onClick}
+	>
+		{children}
+	</button>
+);
 
 export default Button;

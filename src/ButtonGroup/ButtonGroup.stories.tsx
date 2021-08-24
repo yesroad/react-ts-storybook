@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 import ButtonGroup from './ButtonGroup';
 
 export default {
-	title: 'Component/ButtonGroup',
+	title: 'Example/ButtonGroup',
 	component: ButtonGroup,
 	argTypes: {
 		direction: {
@@ -34,7 +34,7 @@ const defaultArgs: {} = {
 
 const buttonComponent: EmotionJSX.Element = (
 	<>
-		<Button theme='secondary'>취소</Button>
+		<Button theme="secondary">취소</Button>
 		<Button>확인</Button>
 	</>
 );
