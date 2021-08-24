@@ -1,6 +1,6 @@
 {
  "name": "yesroad-npm-storybook",
- "version": "0.0.0",
+ "version": "0.0.2",
  "description": "",
  "main": "dist/index.js",
  "source": "./src/index.ts",
@@ -14,10 +14,11 @@
  "scripts": {
   "storybook": "start-storybook -p 6006",
   "build-storybook": "build-storybook",
-  "build": "rollup -c"
+  "build": "rollup -c",
+  "prepare": "npm run build"
  },
- "keywords": [],
- "author": "",
+ "keywords": ["react", "typescript", "storybook", "test"],
+ "author": "yesroad <yesroad.dev@gmail.com>",
  "license": "ISC",
  "devDependencies": {
   "@babel/core": "^7.15.0",

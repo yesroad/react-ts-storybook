@@ -1,6 +1,25 @@
 # React + Typescript + Storybook
 
-### eslint + pritter
+## npm
+
+[npm 저장소 링크](https://www.npmjs.com/package/yesroad-npm-storybook)
+
+> npm repository
+```json
+  
+
+  $ https://www.npmjs.com/package/yesroad-npm-storybook
+```
+
+> npm install
+```json
+  $ npm i yesroad-npm-storybook
+```
+
+---
+## eslint + pritter
+
+<br/>
 
 > 필수 확장프로그램
 ```json
