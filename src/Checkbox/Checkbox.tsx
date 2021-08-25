@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { css } from '@emotion/react';
 import { icoCheck } from './images';
 
@@ -57,7 +58,7 @@ const style = (props: StyleProps) => css`
 		}
 	}
 	input[type='checkbox']:checked + label:before {
-		background-image: url(${icoCheck});
+		background-image: url("${icoCheck}");
 		background-color: ${props.color};
 		border: 1px solid ${props.color};
 	}
